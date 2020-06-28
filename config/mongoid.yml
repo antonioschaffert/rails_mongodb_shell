@@ -162,3 +162,9 @@ test:
         read:
           mode: :primary
         max_pool_size: 1
+production:
+  clients:
+    default:
+      uri: <%= ENV['mongodb_uri'] %>
+      options:
+        server_selection_timeout: 5
